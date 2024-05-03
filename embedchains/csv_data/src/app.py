@@ -1,6 +1,6 @@
 import os
 # Replace this with your HF token
-os.environ["HUGGINGFACE_ACCESS_TOKEN"] = "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"
+os.environ["HUGGINGFACE_ACCESS_TOKEN"] = "hf_XXX"
 
 from embedchain import App
 
@@ -22,5 +22,6 @@ config = {
 app = App.from_config(config=config)
 app.add("https://www.forbes.com/profile/elon-musk")
 app.add("https://en.wikipedia.org/wiki/Elon_Musk")
-app.query("What is the net worth of Elon Musk today?")
+x = app.query("What is the net worth of Elon Musk today?")
+print(x)
 # Answer: The net worth of Elon Musk today is $258.7 billion.
